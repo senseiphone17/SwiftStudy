@@ -9,3 +9,7 @@ print(Kamiki) // ["APL", "MAY", "JUN"]
 print(Kamiki.count) // 3
 print(Kamiki.startIndex) // 3
 print(Kamiki[4]) // MAY
+
+let preKamiki = [String](Kamiki)
+print(preKamiki[0]) // APL
+print(preKamiki.startIndex) // 0
