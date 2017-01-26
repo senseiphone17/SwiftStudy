@@ -8,3 +8,9 @@ print(arrayB) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 var arrayC = [Character]("いろはにほへと".characters)
 print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と"]
+
+var arrayD = [Double](repeating:5.0, count:7)
+print(arrayD) // [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
+
+var lush = Array(repeating: "石鹸", count: 5)
+print(lush) // ["石鹸", "石鹸", "石鹸", "石鹸", "石鹸"] Array<String>
