@@ -14,6 +14,16 @@ print(arrayC.first!) // い
 print(arrayC.last!) // と
 print(arrayC.isEmpty) // false
 
+// Array method
+arrayC.append("ち")
+print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と", "ち"]
+
+let arrayAppend: Array<Character> = ["り", "ぬ", "る"]
+arrayC.append(contentsOf: arrayAppend)
+print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と", "ち", "り", "ぬ", "る"]
+
+print(arrayC.index(of: "は") as Any) // Optional(2)
+print(arrayC.index(of: "む") as Any) // nil
 
 var arrayD = [Double](repeating:5.0, count:7)
 print(arrayD) // [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
