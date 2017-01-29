@@ -25,6 +25,18 @@ print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と", "ち", "り",
 print(arrayC.index(of: "は") as Any) // Optional(2)
 print(arrayC.index(of: "む") as Any) // nil
 
+arrayC.insert("Z", at: 0)
+print(arrayC) // ["Z", "い", "ろ", "は", "に", "ほ", "へ", "と", "ち", "り", "ぬ", "る"]
+
+arrayC.removeFirst()
+print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と", "ち", "り", "ぬ", "る"]
+
+arrayC.removeLast()
+print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と", "ち", "り", "ぬ"]
+
+arrayC.sort()
+print(arrayC) // ["い", "ち", "と", "に", "ぬ", "は", "へ", "ほ", "り", "ろ"]
+
 var arrayD = [Double](repeating:5.0, count:7)
 print(arrayD) // [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
 
