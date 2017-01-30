@@ -37,6 +37,9 @@ print(arrayC) // ["い", "ろ", "は", "に", "ほ", "へ", "と", "ち", "り",
 arrayC.sort()
 print(arrayC) // ["い", "ち", "と", "に", "ぬ", "は", "へ", "ほ", "り", "ろ"]
 
+arrayC.removeAll()
+print(arrayC) // []
+
 var arrayD = [Double](repeating:5.0, count:7)
 print(arrayD) // [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
 
