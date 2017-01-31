@@ -45,3 +45,20 @@ print(arrayD) // [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
 
 var lush = Array(repeating: "石鹸", count: 5)
 print(lush) // ["石鹸", "石鹸", "石鹸", "石鹸", "石鹸"] Array<String>
+
+func maxOfInts(_ first: Int, _ parameters: Int...) -> Int {
+    var max = first
+    
+    for value in parameters {
+        if max < value { max = value}
+    }
+    return max
+}
+
+print( maxOfInts(10, 40, 20)) // 40
+print( maxOfInts(30, 25)) // 30
+print( maxOfInts(3)) // 3
+
+
+
+
