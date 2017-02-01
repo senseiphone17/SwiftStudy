@@ -59,6 +59,15 @@ print( maxOfInts(10, 40, 20)) // 40
 print( maxOfInts(30, 25)) // 30
 print( maxOfInts(3)) // 3
 
+func numPrince(_ prince: Character..., label: String) {
+    for n in prince {
+        print(label + String(n), terminator: " ")
+    }
+    print("")
+}
+
+numPrince("A", "B", "C", label: "王子") // 王子A, 王子B, 王子C
+
 
 
 
