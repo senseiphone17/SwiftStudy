@@ -68,6 +68,8 @@ func numPrince(_ prince: Character..., label: String) {
 
 numPrince("A", "B", "C", label: "王子") // 王子A, 王子B, 王子C
 
-
-
-
+var nestArray: [[String]] = [["あ", "い", "う"], ["A", "B"]]
+print(nestArray[1]) // ["A", "B"]
+print(nestArray[0][1]) // "い"
+nestArray[0].remove(at: 1)
+print(nestArray) // [["あ", "う"], ["A", "B"]]
