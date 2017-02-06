@@ -12,3 +12,6 @@ print(string2700) // 2700
 
 let at: Character = "@"
 print(at) // @
+
+let shime: Character = "\u{3006}"
+print(shime) // 〆
