@@ -15,3 +15,15 @@ print(at) // @
 
 let shime: Character = "\u{3006}"
 print(shime) // 〆
+
+let alphabetC: Character = "C"
+
+if alphabetC >= "A" {
+    print("Aより大きい")
+}
+
+if alphabetC < "A" {
+    print("Aより小さい")
+} else {
+    print("Aより大きい")
+}
