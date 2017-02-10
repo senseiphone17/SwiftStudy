@@ -14,3 +14,11 @@ func printStringPerCharacters(_ str: String) {
 
 printStringPerCharacters("いろはにほへと") // い\nろ\nは\nに\nほ\nへ\nと
 
+func printStringPerCharactersReversed(_ str: String) {
+    for character in str.characters.reversed() {
+        print(character)
+    }
+}
+
+printStringPerCharactersReversed("いろはにほへと") // と\nへ\nほ\nに\nは\nろ\nい
+
