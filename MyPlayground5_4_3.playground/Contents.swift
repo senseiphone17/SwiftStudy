@@ -5,3 +5,6 @@ print(message.characters.count) // 11
 
 let messageNSString = message as NSString
 print(messageNSString.length) // 12
+
+print(message)
+print(messageNSString)
