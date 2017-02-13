@@ -8,3 +8,9 @@ print(messageNSString.length) // 12
 
 print(message)
 print(messageNSString)
+
+var flag = true
+print("結果は\(flag ? "当選" : "落選")です")
+
+flag = false
+print("結果は\(flag ? "当選" : "落選")です")
