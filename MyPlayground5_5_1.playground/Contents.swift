@@ -14,3 +14,12 @@ if let value = dictionary["Java"] {
 var dicStringAndInt = [String: Int]()
 print(dicStringAndInt) // [:]
 print(dicStringAndInt.count) // 0
+
+var dictionary2 = ["Ruby":1995]
+print(dictionary2) // ["Ruby": 1995]
+dictionary2["Java"] = 1995
+print(dictionary2) // ["Java": 1995, "Ruby": 1995]
+dictionary2["Python"] = 1991
+print(dictionary2) // ["Java": 1995, "Ruby": 1995, "Python": 1991]
+dictionary2["Java"] = nil
+print(dictionary2) // ["Ruby": 1995, "Python": 1991]
