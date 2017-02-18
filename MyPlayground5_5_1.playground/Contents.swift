@@ -23,3 +23,9 @@ dictionary2["Python"] = 1991
 print(dictionary2) // ["Java": 1995, "Ruby": 1995, "Python": 1991]
 dictionary2["Java"] = nil
 print(dictionary2) // ["Ruby": 1995, "Python": 1991]
+
+var dictionary3 = dictionary2
+print(dictionary2 == dictionary3) // true
+
+dictionary3["Java"] = 1995
+print(dictionary2 == dictionary3) // false
