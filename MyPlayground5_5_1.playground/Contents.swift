@@ -29,3 +29,6 @@ print(dictionary2 == dictionary3) // true
 
 dictionary3["Java"] = 1995
 print(dictionary2 == dictionary3) // false
+
+dictionary2["Java"] = 1995
+print(dictionary2 == dictionary3) // true
