@@ -32,3 +32,8 @@ print(dictionary2 == dictionary3) // false
 
 dictionary2["Java"] = 1995
 print(dictionary2 == dictionary3) // true
+
+let star = ["Earth":"地球", "Moon":"月"]
+for (english, japanesse) in star {
+    print("\(english) = \(japanesse)") // Moon = 月¥nEarth = 地球
+}
