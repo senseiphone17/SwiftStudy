@@ -37,3 +37,7 @@ let star = ["Earth":"地球", "Moon":"月"]
 for (english, japanesse) in star {
     print("\(english) = \(japanesse)") // Moon = 月¥nEarth = 地球
 }
+
+for (tuple) in star {
+    print("\(tuple.0) = \(tuple.1)") // Moon = 月¥nEarth = 地球
+}
