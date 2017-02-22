@@ -41,3 +41,6 @@ for (english, japanesse) in star {
 for (tuple) in star {
     print("\(tuple.0) = \(tuple.1)") // Moon = 月¥nEarth = 地球
 }
+
+let starJapanese = [String](star.values)
+print(starJapanese) // ["月", "地球"]
