@@ -44,3 +44,5 @@ for (tuple) in star {
 
 let starJapanese = [String](star.values)
 print(starJapanese) // ["月", "地球"]
+
+print(star.count) // 2
