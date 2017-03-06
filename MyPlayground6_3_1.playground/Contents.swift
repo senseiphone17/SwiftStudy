@@ -20,3 +20,12 @@ print(north == east) // false
 
 print(north.clockwise()) // ease
 print(east.clockwise())  // south
+
+enum DirectionMark: Int {
+    case up = 0,
+    down,
+    right,
+    left
+}
+
+print(DirectionMark.right.rawValue == Int(2)) // true
