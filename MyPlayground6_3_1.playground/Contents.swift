@@ -1,16 +1,9 @@
-enum Direction {
-    case north
-    case east
-    case south
-    case west
+enum Direction : Int{
+    case north = 0, east, south, west
     
     func clockwise() -> Direction {
-        switch self {
-        case .north: return .east
-        case .east:  return .south
-        case .south: return .west
-        case .west:  return .north
-        }
+        let t = (self.rawValue + 1) % 4
+        return Direction(rawValue:t)!
     }
 }
 
@@ -18,7 +11,7 @@ let north = Direction.north
 var east: Direction = .east
 print(north == east) // false
 
-print(north.clockwise()) // ease
+print(north.clockwise()) // east
 print(east.clockwise())  // south
 
 enum DirectionMark: Int {
