@@ -5,6 +5,18 @@ enum Direction : Int{
         let t = (self.rawValue + 1) % 4
         return Direction(rawValue:t)!
     }
+    
+    var horizontal: Bool {
+        switch self {
+        case .east, .west: return true
+        default:
+            return false
+        }
+    }
+    
+    mutating func turnBack() {
+        self = Direction(rawValue:((self.rawValue + 2) % 4))!
+    }
 }
 
 let north = Direction.north
@@ -22,3 +34,9 @@ enum DirectionMark: Int {
 }
 
 print(DirectionMark.right.rawValue == Int(2)) // true
+
+var west = Direction.west
+print(west.rawValue) // 3
+west.turnBack()
+print(west.rawValue) // 1
+print(west.horizontal) // true
