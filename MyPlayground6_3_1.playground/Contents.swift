@@ -14,6 +14,12 @@ enum Direction : Int{
         }
     }
     
+    static var defaultDirection = Direction.north
+    
+    init() {
+        self = Direction.defaultDirection
+    }
+    
     mutating func turnBack() {
         self = Direction(rawValue:((self.rawValue + 2) % 4))!
     }
@@ -40,3 +46,9 @@ print(west.rawValue) // 3
 west.turnBack()
 print(west.rawValue) // 1
 print(west.horizontal) // true
+
+let directionA = Direction.defaultDirection
+print(directionA.rawValue) // 0
+Direction.defaultDirection = .south
+let directionB = Direction.defaultDirection
+print(directionB.rawValue) // 2
