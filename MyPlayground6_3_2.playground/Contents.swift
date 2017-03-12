@@ -32,3 +32,16 @@ for t in [t1, t2, t3, t4, t5] {
 // カード小人: 残高不足
 // カード大人: 残高不足
 // カード
+
+print("")
+
+for t in [t2, t3] {
+    if case Ticket.card = t {
+        print("カード")
+    } else {
+        print("カードではない")
+    }
+}
+
+// カードではない
+// カード
