@@ -45,3 +45,15 @@ for t in [t2, t3] {
 
 // カードではない
 // カード
+
+print("")
+
+let tickets:[String:Ticket] = ["田中": Ticket.ticket(360, false, isCoupon: true),
+                               "山田": Ticket.ticket(320, false, isCoupon: false)]
+let name = "山田"
+
+if let t = tickets[name], case Ticket.ticket(320, _, isCoupon: _) = t {
+    print("山田のチケット")
+}
+
+// 山田のチケット
