@@ -57,3 +57,19 @@ if let t = tickets[name], case Ticket.ticket(320, _, isCoupon: _) = t {
 }
 
 // 山田のチケット
+
+print("")
+
+var t101: Ticket = Ticket.ticket(320, true, isCoupon: false)
+var t102: Ticket = Ticket.ticket(400, false, isCoupon: true)
+
+for case let Ticket.ticket(fare, child, coupon) in [t101, t102] where fare > 300 {
+    var k = coupon ? "回数券" : "普通券"
+    if child {
+        k += "(小人)"
+    }
+    print(k, "\(fare)円")
+}
+
+// 普通券(小人) 320円
+// 回数券 400円
