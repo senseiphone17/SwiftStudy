@@ -19,3 +19,24 @@ enum Ticket {
 var myCard: Ticket = Ticket.card(300, false)
 if myCard.pay(260) { print(myCard) } // card(40, false)
 if myCard.pay(220) { print(myCard) }
+
+print("")
+
+enum Message : CustomStringConvertible{
+    case text(String, String)
+    case data(String, [Int8])
+    indirect case forward(String, Message)
+    
+    var description: String {
+        switch self {
+        case let Message.text(from, str): return from + "(" + str + ")"
+        case let Message.data(from, _): return from + "[データ]"
+        case let Message.forward(from, msg): return from +  "←\(msg)"
+        }
+    }
+}
+
+let m1 = Message.text("田中", "こんにちは")
+let m2 = Message.forward("木村", m1)
+let m3 = Message.forward("村山", m2)
+print(m3) // 村山←木村←田中(こんにちは)
