@@ -17,3 +17,18 @@ for wid in stride(from: 2, through: 6, by: 2) {
     }
     print("")
 }
+
+print("")
+
+postfix operator %
+
+postfix func % (n: Int) -> Double {
+    return Double(n) * 0.01
+}
+
+postfix func % (r: Double) -> Double {
+    return r * 0.01
+}
+
+var price: Double = 24_800
+print(price * 80% * 108%) // 21427.2
