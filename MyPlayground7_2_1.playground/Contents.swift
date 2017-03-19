@@ -32,3 +32,21 @@ postfix func % (r: Double) -> Double {
 
 var price: Double = 24_800
 print(price * 80% * 108%) // 21427.2
+
+print("")
+
+infix operator >? : AssignmentPrecedence
+
+func >? (lhs: inout Double, rhs: Double) {
+    if lhs < rhs {
+        lhs = rhs
+    }
+}
+
+var a = 1.28
+
+for x in [0.8, 1.34, -2.0, 0.75] {
+    a >? x
+}
+
+print(a) // 1.34
