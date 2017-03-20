@@ -50,3 +50,20 @@ for x in [0.8, 1.34, -2.0, 0.75] {
 }
 
 print(a) // 1.34
+
+print("")
+
+enum Suit: String {
+    case spade, club, diamond, heart
+}
+
+func ~= (m: Suit, str: String) -> Bool {
+    let low = str.lowercased()
+    return m.rawValue.hasPrefix(low)
+}
+
+print( Suit.spade ~= "spade") // true
+print( Suit.spade ~= "Spade") // true
+print( Suit.spade ~= "sp")    // true
+print( Suit.spade ~= "heart") // false
+print( Suit.heart ~= "heart") // true
