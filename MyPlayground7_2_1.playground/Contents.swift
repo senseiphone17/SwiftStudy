@@ -67,3 +67,24 @@ print( Suit.spade ~= "Spade") // true
 print( Suit.spade ~= "sp")    // true
 print( Suit.spade ~= "heart") // false
 print( Suit.heart ~= "heart") // true
+
+print("")
+
+func skip(_ cond: Bool, _ arg: @autoclosure() -> Int) {
+    if cond {
+        print("value = \(arg())")
+    } else {
+        print("autoclosure not called")
+    }
+}
+
+func highCost(arg: Int) -> Int {
+
+    print("highCost called")
+    
+    return arg * 100
+}
+
+skip(true, 100) // value = 100
+skip(true, highCost(arg: 100)) // highCost called value = 10000
+skip(false, highCost(arg: 100)) // autoclosure not called
