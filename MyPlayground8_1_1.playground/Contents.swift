@@ -33,3 +33,6 @@ let t2 = t1
 print(t1.toString()) // 23:04
 t2.increment()
 print(t1.toString()) // 23:05
+
+t1.increment()
+print(t2.toString()) // 23:06
