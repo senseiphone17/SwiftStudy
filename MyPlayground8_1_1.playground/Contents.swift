@@ -36,3 +36,33 @@ print(t1.toString()) // 23:05
 
 t1.increment()
 print(t2.toString()) // 23:06
+
+print("")
+
+class Time12 : Time, CustomStringConvertible {
+    var pm: Bool
+    init(hour: Int, min: Int, pm: Bool) {
+        self.pm = pm
+        super.init(hour: hour, min: min)
+    }
+    
+    override convenience init(hour: Int, min: Int) {
+        let isPm = hour >= 12
+        self.init(hour: isPm ? hour - 12 : hour, min: min, pm: isPm)
+    }
+    
+    override func advance(min: Int) {
+        super.advance(min: min)
+        while hour >= 12 {
+            hour -= 12
+            pm = !pm
+        }
+    }
+    
+    var description: String {
+        return toString() + " " + (pm ? "PM" : "AM")
+    }
+}
+
+let t12 = Time12.init(hour: 9, min: 40, pm: true)
+print(t12.description) // 9:40 PM
