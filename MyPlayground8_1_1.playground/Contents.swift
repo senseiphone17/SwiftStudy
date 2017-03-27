@@ -66,3 +66,22 @@ class Time12 : Time, CustomStringConvertible {
 
 let t12 = Time12.init(hour: 9, min: 40, pm: true)
 print(t12.description) // 9:40 PM
+
+print("")
+
+var array = [Time]()
+
+array.append(Time(hour: 8, min: 20))
+array.append(Time12(hour: 14, min: 40))
+array.append(Time12(hour: 4, min: 50, pm:true))
+
+for t in array {
+    if t is Time12 { print(t) }
+    else {
+        print(">", t.toString())
+    }
+}
+
+// >  8:20
+// 2:40 PM
+// 4:50 PM
