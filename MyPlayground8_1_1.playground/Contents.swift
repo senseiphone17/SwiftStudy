@@ -86,4 +86,10 @@ for t in array {
 // 2:40 PM
 // 4:50 PM
 
-// contribution
+if let u = array[2] as? Time12 {
+    print(u.pm ? "PM" : "AM") // PM
+}
+
+if let v = array[0] as? Time12 {
+    print(v.pm ? "PM" : "AM") // 出力なし
+}
