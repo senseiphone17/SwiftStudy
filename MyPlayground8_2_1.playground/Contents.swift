@@ -46,3 +46,36 @@ class DateInfo : DayOfMonth {
 var diA = DateInfo.init(2017, 4, 3)
 print(diA) // 04/03
 print(diA.dow) // 1
+
+class CalendarDate : DateInfo {
+    static let namesOfDays = [
+        "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+    ]
+
+    var dweek = String()
+
+    override init(_ y:Int, _ m:Int, _ d:Int) {
+        super.init(y, m, d)
+        dweek = CalendarDate.namesOfDays[dow]
+    }
+
+    convenience init(_ m:Int, _ d:Int, year:Int = 2020) {
+        self.init(year, m, d)
+    }
+
+    override var day:Int {
+        didSet {
+            dow = dayOfWeek(year, month, day)
+            dweek = CalendarDate.namesOfDays[dow]
+        }
+    }
+
+    override var description: String {
+        return "\(year)/" + super.description + "(\(dweek))"
+    }
+}
+
+var cdA = CalendarDate.init(4, 4, year: 2017)
+print(cdA) // 2017/04/04(Tue)
+cdA.day = 5
+print(cdA) // 2017/04/05(Wed)
