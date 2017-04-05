@@ -79,3 +79,8 @@ var cdA = CalendarDate.init(4, 4, year: 2017)
 print(cdA) // 2017/04/04(Tue)
 cdA.day = 5
 print(cdA) // 2017/04/05(Wed)
+
+var cdB = cdA
+print(cdB) // 2017/04/05(Wed)
+cdA.day = 6
+print(cdB) // 2017/04/06(Thu)
