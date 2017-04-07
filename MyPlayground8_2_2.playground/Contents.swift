@@ -32,3 +32,7 @@ class Suica: ICCard {
 var pasmoA = Pasmo(charge: 1000)
 print(pasmoA.idnumber) // 1
 print(pasmoA.money) // 500
+
+var pasmoB = Pasmo(charge: 2000)
+print(pasmoB.idnumber) // 2
+print(pasmoB.money) // 1500
