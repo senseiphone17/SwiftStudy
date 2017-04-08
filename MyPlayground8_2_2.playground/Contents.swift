@@ -36,3 +36,6 @@ print(pasmoA.money) // 500
 var pasmoB = Pasmo(charge: 2000)
 print(pasmoB.idnumber) // 2
 print(pasmoB.money) // 1500
+
+var suicaA = Suica(charge: 3000)
+print(suicaA) // Suica
