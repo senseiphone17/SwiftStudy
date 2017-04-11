@@ -46,3 +46,4 @@ print(plateC.title) // hero
 
 let plateD = NamePlate(name: "", title: "")
 print(plateD) // nil
+print(plateD?.name) // nil
