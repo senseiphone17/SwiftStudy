@@ -47,3 +47,8 @@ print(plateC.title) // hero
 let plateD = NamePlate(name: "", title: "")
 print(plateD) // nil
 print(plateD?.name) // nil
+
+
+let plateE = SpeakerNamePlate(name: "hoge")
+print(plateE?.name)  // hoge
+print(plateE?.title) // Speaker
