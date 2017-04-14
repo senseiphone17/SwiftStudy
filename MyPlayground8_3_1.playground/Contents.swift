@@ -28,3 +28,6 @@ class PropB: Prop {
 
 let propA = PropA.init()
 print(propA.attr) // 0
+
+let propB = PropB.init()
+print(propB.attr) // 0
