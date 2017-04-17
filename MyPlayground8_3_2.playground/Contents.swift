@@ -36,3 +36,7 @@ print(arrangeA[1]) // 8.9
 print(arrangeA[2]) // 7.5
 print(arrangeA[3]) // 9.1
 print(arrangeA[4]) // 0.0
+arrangeA[3] = 1.1
+print(arrangeA[3]) // 1.1
+arrangeA[4] = 2.2
+print(arrangeA[4]) // 0.0
