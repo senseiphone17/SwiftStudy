@@ -6,6 +6,10 @@ class Recipe {
     }
 }
 
+var recipe = Recipe.init()
+print(recipe[3]) // 9.1
+print(recipe[4]) // 0.0
+
 class Arrange: Recipe {
     private var custom: [Double] = []
     override init() {
