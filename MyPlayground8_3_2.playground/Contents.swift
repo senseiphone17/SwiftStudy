@@ -8,6 +8,8 @@ class Recipe {
 
 var recipe = Recipe.init()
 print(recipe[3]) // 9.1
+// recipe[3] = 1.1 get-onlyでエラー
+print(recipe[3]) // 9.1
 print(recipe[4]) // 0.0
 
 class Arrange: Recipe {
