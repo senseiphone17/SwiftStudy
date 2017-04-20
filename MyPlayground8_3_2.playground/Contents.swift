@@ -46,3 +46,9 @@ arrangeA[3] = 1.1
 print(arrangeA[3]) // 1.1
 arrangeA[4] = 2.2
 print(arrangeA[4]) // 0.0
+
+
+
+class PropA {
+    var attr = 0
+}
