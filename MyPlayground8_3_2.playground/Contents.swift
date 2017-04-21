@@ -52,3 +52,6 @@ print(arrangeA[4]) // 0.0
 class PropA {
     var attr = 0
 }
+
+var propA = PropA()
+print(propA.attr) // 0
