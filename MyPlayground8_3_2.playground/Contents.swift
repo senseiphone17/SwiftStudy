@@ -55,3 +55,19 @@ class PropA {
 
 var propA = PropA()
 print(propA.attr) // 0
+
+class PropB: PropA {
+    override var attr: Int {
+        willSet {
+            print("B: will set")
+        }
+        
+        didSet {
+            print("B: dids et")
+        }
+    }
+}
+
+var propB = PropB()
+propB.attr = 2 // B: will set B: didset
+print(propB.attr) // 2
