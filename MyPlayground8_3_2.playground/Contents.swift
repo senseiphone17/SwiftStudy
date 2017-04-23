@@ -69,5 +69,8 @@ class PropB: PropA {
 }
 
 var propB = PropB()
+print(propB.attr) // 0
 propB.attr = 2 // B: will set B: didset
 print(propB.attr) // 2
+
+
