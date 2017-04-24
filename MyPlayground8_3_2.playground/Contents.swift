@@ -47,8 +47,6 @@ print(arrangeA[3]) // 1.1
 arrangeA[4] = 2.2
 print(arrangeA[4]) // 0.0
 
-
-
 class PropA {
     var attr = 0
 }
@@ -72,5 +70,3 @@ var propB = PropB()
 print(propB.attr) // 0
 propB.attr = 2 // B: will set B: didset
 print(propB.attr) // 2
-
-
