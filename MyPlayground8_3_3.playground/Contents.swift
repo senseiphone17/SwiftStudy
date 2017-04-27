@@ -61,3 +61,9 @@ case let u as Time12:
 default:
     print("Time:", t.toString()) // Time: 10:20
 }
+
+let tA = Time12(hour: 3, min: 45, pm: true)
+
+if let tA2 = tA as? Time12 {
+    print(tA2) // 3:45 PM
+}
