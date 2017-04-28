@@ -54,6 +54,7 @@ class Time12 : Time, CustomStringConvertible {
 }
 
 let t = Time(hour: 10, min: 20)
+let t2 = Time12(hour: 23, min: 40)
 
 switch t {
 case let u as Time12:
@@ -61,6 +62,14 @@ case let u as Time12:
 default:
     print("Time:", t.toString()) // Time: 10:20
 }
+
+switch t2 {
+case let u as Time12:
+    print("Time12:", u) // Time12: 11:40 PM
+default:
+    print("Time:", t.toString())
+}
+
 
 let tA = Time12(hour: 3, min: 45, pm: true)
 
