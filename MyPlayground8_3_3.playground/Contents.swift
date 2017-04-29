@@ -76,3 +76,6 @@ let tA = Time12(hour: 3, min: 45, pm: true)
 if let tA2 = tA as? Time12 {
     print(tA2) // 3:45 PM
 }
+
+var array = [Time12(hour: 13, min: 20), Time(hour: 18, min: 45)]
+print( type(of: array) ) // Array<Time>
