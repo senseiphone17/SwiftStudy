@@ -79,3 +79,6 @@ if let tA2 = tA as? Time12 {
 
 var array = [Time12(hour: 13, min: 20), Time(hour: 18, min: 45)]
 print( type(of: array) ) // Array<Time>
+
+var every: [Any] = [ Time12(hour: 1, min: 16), "日本", 22342 ]
+print( type(of: every) ) // Array<Any>
