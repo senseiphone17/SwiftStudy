@@ -26,3 +26,9 @@ class Player: Avator {
 
 var meta: Avator.Type = Player.self
 meta.say() // Player
+
+let p: Avator = meta.init()
+
+if type(of: p) === Player.self {
+    print( (p as! Player).name ) // (none)
+}
