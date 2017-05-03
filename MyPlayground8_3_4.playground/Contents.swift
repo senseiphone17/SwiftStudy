@@ -32,3 +32,7 @@ let p: Avator = meta.init()
 if type(of: p) === Player.self {
     print( (p as! Player).name ) // (none)
 }
+
+let q = Avator()
+meta = type(of: q)
+meta.say() // Avator
