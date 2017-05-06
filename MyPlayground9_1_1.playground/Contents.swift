@@ -23,3 +23,13 @@ print(yuta) // 裕太, 17
 print(yuta === x) // true
 yuta = nil
 x = nil // 裕太: deinit
+
+print()
+
+func temp(_ entry: [String: Person]) {
+    var list = [[String: Person]]()
+    list.append(entry)
+    print("\(list.count)個のエントリ")
+}
+
+temp(["Takeshi": Person(name: "剛", age:20)]) // 1個のエントリ 剛: deinit
