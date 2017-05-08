@@ -3,7 +3,7 @@ struct DoNothing {
     init(_ a: [Int]) { array = a }
     
     mutating func trouble(_ x: Int) -> Int {
-        // array[x] = 0
+        /* array[x] = 0　*/
         return array[x - 1]
     }
 }
