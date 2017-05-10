@@ -6,7 +6,7 @@ class Student: CustomStringConvertible {
         self.name = name
     }
     
-    func description-> String {
+    func description() -> String {
         var s = "\(name)"
         
         if let mem = club {
