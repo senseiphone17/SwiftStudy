@@ -20,3 +20,21 @@ class Student: CustomStringConvertible {
         print("\(name): deinit")
     }
 }
+
+class Club {
+    let name: String
+    var members = [Student]()
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func add(_ p: Student) {
+        members.append(p)
+        p.club = self
+    }
+    
+    deinit {
+        print("Club \(name): deinit")
+    }
+}
