@@ -6,14 +6,14 @@ class Student: CustomStringConvertible {
         self.name = name
     }
     
-    func description() -> String {
-        var s = "\(name)"
+    var description: String {
+                var s = "\(name)"
         
-        if let mem = club {
-            s += ", \(mem.name)"
-        }
-        
-        return s
+                if let mem = club {
+                    s += ", \(mem.name)"
+                }
+                
+                return s
     }
 
     deinit {
