@@ -38,3 +38,7 @@ class Club {
         print("Club \(name): deinit")
     }
 }
+
+do {
+    let tinyClub: Club = Club(name: "ひるね同好会") // Club ひるね同好会:　deinit
+}
