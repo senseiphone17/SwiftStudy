@@ -42,5 +42,6 @@ class Club {
 do {
     let tinyClub: Club = Club(name: "ひるね同好会") // Club ひるね同好会:　deinit
     let yuji: Student = Student(name: "ゆうじ")
+    tinyClub.add(yuji) //
     print(yuji)
 }
