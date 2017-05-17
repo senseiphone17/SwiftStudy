@@ -45,3 +45,13 @@ do {
     tinyClub.add(yuji) //
     print(yuji)
 }
+
+print()
+
+weak var who: Student? = nil
+do {
+    let kaz: Student = Student(name: "一美")
+    who = kaz
+    print(who!)
+}
+print(who)
