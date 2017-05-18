@@ -55,3 +55,7 @@ do {
     print(who!)
 }
 print(who)
+
+print()
+
+weak var yukari: Student? = Student(name: "ゆかり")
