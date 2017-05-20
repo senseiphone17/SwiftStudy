@@ -38,3 +38,13 @@ class Club {
         print("Club \(name): deinit")
     }
 }
+
+var tinyClub: Club! = Club(name: "ひるね同好会")
+var yuji: Student! = Student(name: "ゆうじ")
+tinyClub.add(yuji)
+print(yuji)
+tinyClub.add(Student(name: "かずみ"))
+tinyClub = nil
+
+print(yuji)
+yuji = nil
