@@ -39,11 +39,13 @@ class Club {
     }
 }
 
-unowned var who: Student
+//unowned var who: Student
+//
+//do {
+//    let kaz: Student = Student(name: "一美")
+//    who = kaz
+//    print(who)
+//}
+//print(who) // error
 
-do {
-    let kaz: Student = Student(name: "一美")
-    who = kaz
-    print(who)
-}
-print(who) // error
+unowned var yukari = Student(name: "ゆかり")
