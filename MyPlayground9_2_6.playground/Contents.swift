@@ -31,3 +31,7 @@ class HomeRoom {
         print("HomeRoom \(name): deinit")
     }
 }
+
+do {
+    let hr = HomeRoom(name: "3年3組")
+}
