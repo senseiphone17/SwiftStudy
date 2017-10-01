@@ -26,3 +26,13 @@ simin.sayHello(to: simin) // どうも、太郎さん。
 
 let jiro = Citizen(name: "次郎")
 simin.sayHello(to: jiro)
+
+jiro.petPhrase = "そうですね"
+
+func printNames(list: [Human]) {
+    for p in list {
+        print(p.name + ": " + p.petPhrase)
+    }
+}
+
+printNames(list: [simin, jiro])
