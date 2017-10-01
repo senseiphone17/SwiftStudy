@@ -23,3 +23,6 @@ class Citizen : Human {
 
 let simin = Citizen(name: "太郎")
 simin.sayHello(to: simin) // どうも、太郎さん。
+
+let jiro = Citizen(name: "次郎")
+simin.sayHello(to: jiro)
