@@ -16,13 +16,13 @@ protocol HealthInfo: Human {
 }
 
 struct Person : HealthInfo {
-    let nmae: String
+    let name: String
     let sex: Sex?
     var weight = 0.0
     var height = 0.0
     var petPhrase = "すごいね"
     init(name: String) {
-        self.name
+        self.name = name
         sex = nil
     }
     
@@ -31,12 +31,19 @@ struct Person : HealthInfo {
         self.sex = sex
     }
     
-    func seyHello(to: Human) {
+    func sayHello(to p: Human) {
         if let w = p as? HealthInfo,
            self.sex == w.sex {
-            print("やあ、" + p.name + "。")
+            print("やあ、" + w.name + "。")
         } else {
             print("こんにちは")
         }
     }
 }
+
+let akane = Person(name: "akane", sex: Sex.Female)
+let akiko = Person(name: "akiko", sex: Sex.Female)
+let yuki  = Person(name: "yui")
+
+akane.sayHello(to: akiko) //　やあ、akiko。
+akane.sayHello(to: yuki)  //　こんにちは
