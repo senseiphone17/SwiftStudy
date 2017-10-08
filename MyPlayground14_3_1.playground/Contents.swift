@@ -21,3 +21,15 @@ print(b)
 
 let p = Vector(x: 10.0, y: 2.0 / 2.5).y
 print(p)
+
+extension SimpleVector where Self: Equatable, Element: Equatable {}
+
+func ==<T>(lhs: T, rhs: T) -> Bool where T: SimpleVector, T.Element: Equatable {
+    return lhs.x == rhs.x && lhs.y == rhs.y
+}
+
+let c = Vector<Double>(x: 16.0, y: 5.0)
+var d = Vector<Double>(x: 10.0, y: 5.0)
+print( c == d )
+d.x += 6.0
+print( c == d )
